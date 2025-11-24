@@ -7,7 +7,7 @@ Feature: Login functionality
     When user enters username "tomsmith"
     And user enters password "SuperSecretPassword!"
     And user clicks on login button
-    Then message should be displayed
+    Then user should see the successful login message
     
   Scenario: Successful login with invalid username
     When user enters username "usernm"
