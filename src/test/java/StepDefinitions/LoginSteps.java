@@ -4,11 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class LoginSteps {
 
@@ -50,7 +53,13 @@ public class LoginSteps {
         }
         driver.quit();
     }
-    
+
+    @Then("message should be displayed")
+    public void message_should_be_displayed() {
+        WebElement successMsg = driver.findElement(
+                By.xpath("//*[contains(text(),'You logged into a secure area!')]"));
+        Assert.assertTrue(successMsg.isDisplayed());
+    }
     @Then("user should see the failure login message")
     public void user_should_see_the_failureMessage() {
         boolean isDisplayed = driver.findElement(By.xpath("//*[contains(text(),\"Your password is invalid\")]")).isDisplayed();

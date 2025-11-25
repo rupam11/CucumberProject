@@ -25,7 +25,19 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+    <scope>test</scope>
+</dependency>
+        <!-- Cucumber JUnit Jupiter -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.10.0</version>
+    <scope>test</scope>
+</dependency>
         <!-- Cucumber Java -->
         <dependency>
             <groupId>io.cucumber</groupId>
