@@ -1,5 +1,11 @@
+# Eclipse / IDE
+.classpath
+.project
+.settings/
+
+# Maven build
 target/
-.idea/
-*.iml
+
+# Optional
 *.log
-*.class
+*.tmp
